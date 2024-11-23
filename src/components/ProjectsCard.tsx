@@ -34,7 +34,7 @@ const ProjectCard = () => {
             className="relative group w-[300px] h-[170px] sm:w-[240px] sm:h-[140px] md:w-[300px] md:h-[170px]"
           >
             <Image
-              className="rounded-lg"
+              className="rounded-lg group-hover:brightness-50"
               fill
               src={"/assets/projects/paceInfosys/2.png"}
               alt="pace-infosys-image"
@@ -53,7 +53,7 @@ const ProjectCard = () => {
             className="relative group w-[300px] h-[170px] sm:w-[240px] sm:h-[140px] md:w-[300px] md:h-[170px]"
           >
             <Image
-              className="rounded-lg"
+              className="rounded-lg group-hover:brightness-50"
               fill
               src={"/assets/projects/paceInfosys/3.png"}
               alt="pace-infosys-image"
@@ -72,7 +72,7 @@ const ProjectCard = () => {
             className="relative group w-[300px] h-[170px] sm:w-[240px] sm:h-[140px] md:w-[300px] md:h-[170px]"
           >
             <Image
-              className="rounded-lg"
+              className="rounded-lg group-hover:brightness-50"
               fill
               src={"/assets/projects/masterClass/4.png"}
               alt="pace-infosys-image"
@@ -91,7 +91,7 @@ const ProjectCard = () => {
             className="relative group w-[300px] h-[170px] sm:w-[240px] sm:h-[140px] md:w-[300px] md:h-[170px]"
           >
             <Image
-              className="rounded-lg"
+              className="rounded-lg group-hover:brightness-50"
               fill
               src={"/assets/projects/masterClass/5.png"}
               alt="pace-infosys-image"
@@ -110,7 +110,7 @@ const ProjectCard = () => {
             className="relative group w-[300px] h-[170px] sm:w-[240px] sm:h-[140px] md:w-[300px] md:h-[170px]"
           >
             <Image
-              className="rounded-lg"
+              className="rounded-lg group-hover:brightness-50"
               fill
               src={"/assets/projects/masterClass/6.png"}
               alt="pace-infosys-image"
