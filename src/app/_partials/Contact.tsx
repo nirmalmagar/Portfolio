@@ -5,10 +5,11 @@ import { IoMdCall } from "react-icons/io";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import Button from "@/components/Button";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
-  console.log("result",result)
+
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setResult("Sending....");
@@ -20,13 +21,14 @@ const Contact = () => {
     });
 
     const data = await response.json();
-
-    if (data.success) {
+    if (response.ok) {
       setResult("Form Submitted Successfully");
       event.currentTarget?.reset();
+      toast.success("form submit successfully")
     } else {
       console.log("Error", data);
       setResult(data.message);
+      toast.error("something went wrong")
     }
   };
   return (
