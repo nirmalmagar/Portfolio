@@ -269,7 +269,7 @@ const page = () => {
                 <SkillComp
                   className="my-8"
                   language="Collaboration and Communication"
-                  percentage="80%"
+                  percentage="90%"
                 />
                 <SkillComp language="Problem-Solving Skills" percentage="85%" />
                 <SkillComp

@@ -8,11 +8,9 @@ import Button from "@/components/Button";
 import { toast } from "react-toastify";
 
 const Contact = () => {
-  const [result, setResult] = React.useState("");
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setResult("Sending....");
     const formData = new FormData(event.currentTarget);
     formData.append("access_key", "a41d5751-219f-46a7-b11f-76b46897a7dd");
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -21,13 +19,11 @@ const Contact = () => {
     });
 
     const data = await response.json();
-    if (response.ok) {
-      setResult("Form Submitted Successfully");
+    if (data) {
       event.currentTarget?.reset();
       toast.success("form submit successfully")
     } else {
       console.log("Error", data);
-      setResult(data.message);
       toast.error("something went wrong")
     }
   };
@@ -57,7 +53,7 @@ const Contact = () => {
           <IoLogoWhatsapp className="text-2xl" />
         </div>
         <Button theme="blue" className="text-black font-bold text-xl w-fit">
-          <a href="assets/CCV.pdf" download>Download CV</a>
+          <a href="assets/Resume.pdf" download >Download CV</a>
         </Button>
       </div>
       <form onSubmit={onSubmit} className="flex flex-col gap-y-8 w-full">
