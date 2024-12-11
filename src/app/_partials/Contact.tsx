@@ -23,7 +23,7 @@ const Contact = () => {
       event.currentTarget?.reset();
       toast.success("form submit successfully")
     } else {
-      console.log("Error", data);
+      console.log("Error on", data);
       toast.error("something went wrong")
     }
   };
